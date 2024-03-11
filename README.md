@@ -9,46 +9,82 @@ In this project, a database named "library" with several tables is designed to a
 ## An overview of the tables and their attributes:
 
 1.Branch:
+
   Branch_no (Primary Key)
+  
   Manager_Id
+  
   Branch_address
+  
   Contact_no
+  
 
 2.Employee:
+
   Emp_Id (Primary Key)
+  
   Emp_name
+  
   Emp_Position
+  
   Salary
+  
   Branch_no (Foreign Key referencing Branch_no in Branch table)
+  
 
 3.Books:
+
   ISBN (Primary Key)
+  
   Book_title
+  
   Category
+  
   Rental_Price
+  
   Stock_Status (Indicating book availability)
+  
   Author
+  
   Publisher
+  
 
 4.Customer:
+
   Customer_Id (Primary Key)
+  
   Customer_name
+  
   Customer_address
+  
   Reg_date (Registration date)
+  
 
 5.IssueStatus:
+
   Issue_Id (Primary Key)
+  
   Issued_cust (Foreign Key referencing Customer_Id in Customer  table)
+  
   Issued_book_name
+  
   Issue_date
+  
   Isbn_book (Foreign Key referencing ISBN in Books table)
+  
 
 6.ReturnStatus:
+
   Return_Id (Primary Key)
+  
   Return_cust (Foreign Key referencing Customer_Id in Customer  table)
+  
   Return_book_name
+  
   Return_date
+  
   Isbn_book2 (Foreign Key referencing ISBN in Books table)
+  
 
 This system enables to perform various queries and operations to efficiently manage library resources and services. This project includes the queries for the following:
 
